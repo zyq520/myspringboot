@@ -54,6 +54,11 @@
        <groupId>org.springframework.boot</groupId>
        <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+    <!-- jetty -->
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-jetty</artifactId>
+    </dependency>
   </dependencies>
   
   <build>
