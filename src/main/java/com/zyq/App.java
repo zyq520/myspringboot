@@ -9,15 +9,11 @@
 
 
 package com.zyq;
-import javax.servlet.MultipartConfigElement;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
-import org.springframework.boot.context.embedded.MultipartConfigFactory;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-
 import com.zyq.filter.MyFilter;
 import com.zyq.servlet.MyServlet;
 
