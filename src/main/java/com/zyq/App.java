@@ -27,34 +27,34 @@ import com.zyq.servlet.MyServlet;
  */
 @SpringBootApplication
 public class App {
-//    /**
-//     * 注册servlet
-//    * @Title: MyServlet 
-//    * @Description: TODO(这里用一句话描述这个方法的作用) 
-//    * @param @return    设定文件 
-//    * @return ServletRegistrationBean    返回类型 
-//    * @throws
-//     */
-//    @Bean
-//    public ServletRegistrationBean MyServlet(){
-//        return new ServletRegistrationBean(new MyServlet(),"/myservlet/");
-//    }
-//    /**
-//     * 注册过滤器
-//    * @Title: MyFilter 
-//    * @Description: TODO(这里用一句话描述这个方法的作用) 
-//    * @param @return    设定文件 
-//    * @return FilterRegistrationBean    返回类型 
-//    * @throws
-//     */
-//    @Bean
-//    public FilterRegistrationBean MyFilter(){
-//        FilterRegistrationBean filterRegistrationBean=new FilterRegistrationBean();
-//        filterRegistrationBean.setFilter(new MyFilter());  
-//        filterRegistrationBean.setEnabled(true);  
-//        filterRegistrationBean.addUrlPatterns("/*"); 
-//        return filterRegistrationBean;
-//    }
+    /**
+     * 注册servlet
+    * @Title: MyServlet 
+    * @Description: TODO(这里用一句话描述这个方法的作用) 
+    * @param @return    设定文件 
+    * @return ServletRegistrationBean    返回类型 
+    * @throws
+     */
+    @Bean
+    public ServletRegistrationBean MyServlet(){
+        return new ServletRegistrationBean(new MyServlet(),"/myservlet/");
+    }
+    /**
+     * 注册过滤器
+    * @Title: MyFilter 
+    * @Description: TODO(这里用一句话描述这个方法的作用) 
+    * @param @return    设定文件 
+    * @return FilterRegistrationBean    返回类型 
+    * @throws
+     */
+    @Bean
+    public FilterRegistrationBean MyFilter(){
+        FilterRegistrationBean filterRegistrationBean=new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new MyFilter());  
+        filterRegistrationBean.setEnabled(true);  
+        filterRegistrationBean.addUrlPatterns("/*"); 
+        return filterRegistrationBean;
+    }
     /**
      * 文件上传设置
     * @Title: main 
