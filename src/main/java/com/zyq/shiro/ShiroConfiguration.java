@@ -12,6 +12,8 @@ package com.zyq.shiro;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import net.sf.ehcache.CacheManager;
+
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -81,7 +83,7 @@ public class ShiroConfiguration {
        MyShiroRealm myShiroRealm = new MyShiroRealm();
        myShiroRealm.setCredentialsMatcher(hashedCredentialsMatcher());
        //注入缓存管理器;
-       myShiroRealm.setCacheManager(ehCacheManager());//这个如果执行多次，也是同样的一个对象;
+       //myShiroRealm.setCacheManager(ehCacheManager());//这个如果执行多次，也是同样的一个对象;
        return myShiroRealm;
     }
     
@@ -117,6 +119,7 @@ public class ShiroConfiguration {
     public EhCacheManager ehCacheManager(){
        System.out.println("ShiroConfiguration.getEhCacheManager()");
        EhCacheManager cacheManager = new EhCacheManager();
+       CacheManager m=cacheManager.getCacheManager();
        cacheManager.setCacheManagerConfigFile("classpath:ehcache-shiro.xml");
        return cacheManager;
     }

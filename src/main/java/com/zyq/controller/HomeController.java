@@ -32,6 +32,7 @@ public class HomeController {
     
     @RequestMapping({"/","/index"})
     public String index(){
+       System.out.println("登入");
        return"/index";
     }
    

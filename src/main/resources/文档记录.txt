@@ -1,0 +1,1 @@
+热部署shiro缓存有问题,在ShiroConfiguration的myShiroRealm()方法中注释掉myShiroRealm.setCacheManager(ehCacheManager());
