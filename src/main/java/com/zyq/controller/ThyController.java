@@ -12,6 +12,7 @@ package com.zyq.controller;
 
 import java.util.Map;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 public class ThyController {
-    
+
     @RequestMapping("/helloHtml")
     public String helloHtml(Map<String,Object> map){
        map.put("hello","from TemplateController.helloHtml");
