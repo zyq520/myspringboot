@@ -14,11 +14,14 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @ClassName: HomeController
@@ -63,5 +66,13 @@ public class HomeController {
         map.put("msg", msg);
         // 此方法不处理登录成功,由shiro进行处理.
         return "/login";
+    }
+    
+    @RequestMapping("/logout")
+    public void logout(){
+        Subject subject = SecurityUtils.getSubject();
+        if (subject.isAuthenticated()) {
+            subject.logout(); // session 会销毁，在SessionListener监听session销毁，清理权限缓存
+        }
     }
 }
