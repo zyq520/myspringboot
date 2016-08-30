@@ -88,12 +88,20 @@
 			<artifactId>shiro-ehcache</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		<!--devtools可以实现页面热部署（生在保存时机），注意：因为其采用的虚拟机机制，该项重启是很快的 
+		<!-- spring-boot mybatis依赖： 请不要使用1.0.0版本，因为还不支持拦截器插件 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-		</dependency>-->
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!--MyBatis提供了拦截器接口，我们可以实现自己的拦截器 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<!--devtools可以实现页面热部署（生在保存时机），注意：因为其采用的虚拟机机制，该项重启是很快的 <dependency> <groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-devtools</artifactId> <optional>true</optional> </dependency> -->
 	</dependencies>
 
 	<build>

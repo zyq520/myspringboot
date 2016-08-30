@@ -9,11 +9,13 @@
 
 
 package com.zyq;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
+
 import com.zyq.filter.MyFilter;
 import com.zyq.servlet.MyServlet;
 
@@ -26,6 +28,7 @@ import com.zyq.servlet.MyServlet;
  * @ComponentScan(basePackages={"cn.xxx","org.xxxx"})
  */
 @SpringBootApplication
+@MapperScan("com.zyq.mapper")
 public class App {
     /**
      * 注册servlet
