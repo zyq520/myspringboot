@@ -1,25 +1,17 @@
-/**   
-* @Title: MyHttpSessionListener.java
-* @Package com.zyq.listener
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月26日 上午11:23:03
-* @version V1.0   
-*/
-
-
 package com.zyq.listener;
-
-import javax.servlet.http.HttpSessionEvent;
-import javax.servlet.http.HttpSessionListener;
 
 /**
  * @ClassName: MyHttpSessionListener
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(Session监听器)
  * @author 庄友权
  * @date 2016年8月26日 上午11:23:03
  * 
  */
+
+import javax.servlet.http.HttpSessionEvent;
+import javax.servlet.http.HttpSessionListener;
+
+
 
 public class MyHttpSessionListener implements HttpSessionListener {
     

@@ -1,13 +1,3 @@
-/**   
-* @Title: App.java
-* @Package com.zyq.springboot
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月25日 上午11:30:05
-* @version V1.0   
-*/
-
-
 package com.zyq;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

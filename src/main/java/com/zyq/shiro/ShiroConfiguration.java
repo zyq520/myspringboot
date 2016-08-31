@@ -1,19 +1,15 @@
-/**   
- * @Title: ShiroConfiguration.java
- * @Package com.zyq.shiro
- * @Description: TODO(用一句话描述该文件做什么)
- * @author 庄友权   
- * @date 2016年8月29日 上午10:23:42
- * @version V1.0   
- */
-
 package com.zyq.shiro;
+
+/**
+ * @ClassName: ShiroConfiguration
+ * @Description: TODO(Shiro配置)
+ * @author 庄友权
+ * @date 2016年8月29日 上午10:23:42
+ * 
+ */
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import net.sf.ehcache.CacheManager;
-
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -23,13 +19,6 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @ClassName: ShiroConfiguration
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年8月29日 上午10:23:42
- * 
- */
 
 @Configuration
 public class ShiroConfiguration {

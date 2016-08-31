@@ -1,18 +1,4 @@
-/**   
-* @Title: UserInfoRepository.java
-* @Package com.zyq.dao
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月29日 上午10:55:11
-* @version V1.0   
-*/
-
-
 package com.zyq.dao;
-
-import org.springframework.data.repository.CrudRepository;
-
-import com.zyq.model.UserInfo;
 
 /**
  * @ClassName: UserInfoRepository
@@ -21,6 +7,12 @@ import com.zyq.model.UserInfo;
  * @date 2016年8月29日 上午10:55:11
  * 
  */
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.zyq.model.UserInfo;
+
+
 
 public interface UserInfoRepository extends CrudRepository<UserInfo,Long>{
    

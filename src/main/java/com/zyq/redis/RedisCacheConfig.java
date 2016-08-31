@@ -1,14 +1,14 @@
+package com.zyq.redis;
+
 /**   
 * @Title: RedisCacheConfig.java
 * @Package com.zyq.redis
-* @Description: TODO(用一句话描述该文件做什么)
+* @Description: TODO(redis缓存配置)
 * @author 庄友权   
 * @date 2016年8月27日 下午3:50:30
 * @version V1.0   
 */
 
-
-package com.zyq.redis;
 import java.lang.reflect.Method;
 
 import org.springframework.cache.CacheManager;
@@ -30,8 +30,6 @@ import org.springframework.data.redis.core.RedisTemplate;
  *
  * 普通使用普通类的方式的话，那么在使用@Cacheable的时候还需要指定KeyGenerator的名称;这样编码的时候比较麻烦。
  *
- * @author Angel(QQ:412887952)
- * @version v.0.1
  */
 @Configuration
 @EnableCaching//启用缓存，这个注解很重要；

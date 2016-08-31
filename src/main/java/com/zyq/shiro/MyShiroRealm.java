@@ -1,13 +1,12 @@
-/**   
- * @Title: MyShiroRealm.java
- * @Package com.zyq.shiro
- * @Description: TODO(用一句话描述该文件做什么)
- * @author 庄友权   
- * @date 2016年8月29日 上午11:05:27
- * @version V1.0   
- */
-
 package com.zyq.shiro;
+
+/**
+ * @ClassName: MyShiroRealm
+ * @Description: TODO(shiro realm)
+ * @author 庄友权
+ * @date 2016年8月29日 上午11:05:27
+ * 
+ */
 
 import javax.annotation.Resource;
 
@@ -26,13 +25,7 @@ import com.zyq.model.SysRole;
 import com.zyq.model.UserInfo;
 import com.zyq.service.UserInfoService;
 
-/**
- * @ClassName: MyShiroRealm
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年8月29日 上午11:05:27
- * 
- */
+
 
 public class MyShiroRealm extends AuthorizingRealm {
 

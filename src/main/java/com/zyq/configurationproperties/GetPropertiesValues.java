@@ -1,14 +1,15 @@
 package com.zyq.configurationproperties;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 /**
  * @ClassName: ConfigurationProperties
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(spring preoperties值读取实体类)
  * @author 庄友权
  * @date 2016年8月31日 上午10:09:52
- * 
  */
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+
 @ConfigurationProperties(prefix="com.zyq.spring")
 public class GetPropertiesValues {
     private String name;//博客作者

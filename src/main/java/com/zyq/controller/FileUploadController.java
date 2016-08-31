@@ -1,13 +1,3 @@
-/**   
-* @Title: FileController.java
-* @Package com.zyq.controller
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月26日 下午1:31:32
-* @version V1.0   
-*/
-
-
 package com.zyq.controller;
 
 /**

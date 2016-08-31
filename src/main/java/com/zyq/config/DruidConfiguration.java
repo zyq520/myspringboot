@@ -1,17 +1,8 @@
-/**   
- * @Title: DruidConfiguration.java
- * @Package com.zyq.config
- * @Description: TODO(用一句话描述该文件做什么)
- * @author 庄友权   
- * @date 2016年8月25日 下午4:14:17
- * @version V1.0   
- */
-
 package com.zyq.config;
 
 /**
  * @ClassName: DruidConfiguration
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(druid 配置，性能监控)
  * @author 庄友权
  * @date 2016年8月25日 下午4:14:17
  * 
@@ -31,14 +22,6 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 
-/**
- * druid 配置.
- * 
- * 这样的方式不需要添加注解：@ServletComponentScan
- * 
- * @author Administrator
- * 
- */
 @Configuration
 public class DruidConfiguration {
 

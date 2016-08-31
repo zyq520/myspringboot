@@ -1,14 +1,12 @@
-/**   
-* @Title: MyFilter.java
-* @Package com.zyq.filter
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月26日 上午11:15:04
-* @version V1.0   
-*/
-
-
 package com.zyq.filter;
+
+/**
+ * @ClassName: MyFilter
+ * @Description: TODO(自定义过滤器)
+ * @author 庄友权
+ * @date 2016年8月26日 上午11:15:04
+ * 
+ */
 
 import java.io.IOException;
 
@@ -19,13 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-/**
- * @ClassName: MyFilter
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年8月26日 上午11:15:04
- * 
- */
+
 
 public class MyFilter implements Filter{
 

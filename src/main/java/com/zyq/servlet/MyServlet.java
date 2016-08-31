@@ -1,13 +1,3 @@
-/**   
-* @Title: MyServlet.java
-* @Package com.zyq.servlet
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月26日 上午11:11:59
-* @version V1.0   
-*/
-
-
 package com.zyq.servlet;
 
 import java.io.IOException;
@@ -20,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @ClassName: MyServlet
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(自定义servlet)
  * @author 庄友权
  * @date 2016年8月26日 上午11:11:59
  * 

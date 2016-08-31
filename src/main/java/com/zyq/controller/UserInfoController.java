@@ -1,13 +1,3 @@
-/**   
-* @Title: UserInfoController.java
-* @Package com.zyq.controller
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月29日 下午1:35:43
-* @version V1.0   
-*/
-
-
 package com.zyq.controller;
 
 /**

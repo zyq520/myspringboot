@@ -1,18 +1,8 @@
-/**   
-* @Title: DruidStatViewServlet.java
-* @Package com.zyq.servlet
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月25日 下午4:06:05
-* @version V1.0   
-*/
-
-
 package com.zyq.servlet;
 
 /**
  * @ClassName: DruidStatViewServlet
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(druid数据源状态监控 servlet)
  * @author 庄友权
  * @date 2016年8月25日 下午4:06:05
  * 

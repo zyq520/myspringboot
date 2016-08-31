@@ -1,13 +1,12 @@
-/**   
- * @Title: email.java
- * @Package com.zyq
- * @Description: TODO(用一句话描述该文件做什么)
- * @author 庄友权   
- * @date 2016年8月30日 下午3:57:12
- * @version V1.0   
- */
-
 package com.zyq.email;
+
+/**
+ * @ClassName: email
+ * @Description: TODO(发送邮件4种常见方法)
+ * @author 庄友权
+ * @date 2016年8月30日 下午3:57:12
+ * 
+ */
 
 import java.io.File;
 import java.util.HashMap;
@@ -26,20 +25,12 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
-import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import com.zyq.App;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 
-/**
- * @ClassName: email
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年8月30日 下午3:57:12
- * 
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
 public class email {

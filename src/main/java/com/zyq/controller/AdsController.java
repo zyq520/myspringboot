@@ -1,23 +1,4 @@
-/**   
-* @Title: AdsController.java
-* @Package com.zyq.controller
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月25日 下午2:26:04
-* @version V1.0   
-*/
-
-
 package com.zyq.controller;
-
-import javax.annotation.Resource;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.zyq.model.Ads;
-import com.zyq.service.AdsService;
 
 /**
  * @ClassName: AdsController
@@ -26,6 +7,14 @@ import com.zyq.service.AdsService;
  * @date 2016年8月25日 下午2:26:04
  * 
  */
+
+import javax.annotation.Resource;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.zyq.model.Ads;
+import com.zyq.service.AdsService;
+
+
 @RestController
 @RequestMapping("/ads")
 public class AdsController {

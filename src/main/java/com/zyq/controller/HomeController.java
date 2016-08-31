@@ -1,27 +1,4 @@
-/**   
-* @Title: HomeController.java
-* @Package com.zyq.controller
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月29日 上午10:18:51
-* @version V1.0   
-*/
-
-
 package com.zyq.controller;
-
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.subject.Subject;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @ClassName: HomeController
@@ -30,6 +7,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2016年8月29日 上午10:18:51
  * 
  */
+
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
 @Controller
 public class HomeController {
     

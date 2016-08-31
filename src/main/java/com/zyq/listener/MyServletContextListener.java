@@ -1,25 +1,17 @@
-/**   
-* @Title: MyServletContextListener.java
-* @Package com.zyq.listener
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月26日 上午11:21:49
-* @version V1.0   
-*/
-
-
 package com.zyq.listener;
-
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 
 /**
  * @ClassName: MyServletContextListener
- * @Description: TODO(这里用一句话描述这个类的作用)
+ * @Description: TODO(自定义监听器)
  * @author 庄友权
  * @date 2016年8月26日 上午11:21:50
  * 
  */
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+
 
 public class MyServletContextListener implements ServletContextListener{
 

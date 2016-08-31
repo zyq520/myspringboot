@@ -1,14 +1,11 @@
-/**   
-* @Title: TestGetPropertiesValues.java
-* @Package com.zyq.configurationproperties
-* @Description: TODO(用一句话描述该文件做什么)
-* @author 庄友权   
-* @date 2016年8月31日 上午10:13:56
-* @version V1.0   
-*/
-
-
 package com.zyq.configurationproperties;
+
+/**
+ * @ClassName: TestGetPropertiesValues
+ * @Description: TODO(spring preoperties值读取junit测试类)
+ * @author 庄友权
+ * @date 2016年8月31日 上午10:13:56
+ */
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,13 +15,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.zyq.App;
 
-/**
- * @ClassName: TestGetPropertiesValues
- * @Description: TODO(这里用一句话描述这个类的作用)
- * @author 庄友权
- * @date 2016年8月31日 上午10:13:56
- * 
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
 public class TestGetPropertiesValues {
