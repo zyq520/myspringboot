@@ -58,3 +58,12 @@ public String demoAdd(@Valid Demo demo,BindingResult result,Model model){
     }
     return "/demo";
 }
+
+mybatis 如何获取插入的id
+@Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id") 
+
+JPA的4种状态
+new—新实体(新生态)：实体由应用产生和实体管理器没有任何联系，也没有唯一的标识符。
+managed—持久化实体（或者托管实体） （持久态）：新实体和实体管理器产生关联（通过persist()、merge()等方法），在实体管理器中存在和被管理，标志是在实体管理器中有一个唯一的标志。
+detached—分离的实体(游离态)：实体有唯一的标识，但它的标识不被实体管理器管理。
+removed—删除的实体（删除状态）：实体被remove()方法删除，对应的记录将会在当前事务提交的时候从数据库中删除。
