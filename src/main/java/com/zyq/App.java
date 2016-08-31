@@ -72,7 +72,7 @@ public class App {
 //    } 
 
     public static void main(String[] args) {
-        System.out.println("热部署");
+        //System.out.println("热部署");
         SpringApplication.run(App.class, args);
     }
 }
