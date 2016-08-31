@@ -32,6 +32,7 @@
 @NotNull(message = "身份证不能为空") 
 @Pattern(regexp="^(\\d{18,18}|\\d{15,15}|(\\d{17,17}[x|X]))$", message="身份证格式错误")
 例子
+实体类：
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 public class Demo {
@@ -42,4 +43,18 @@ public class Demo {
     @Length(min=6,message="密码长度不能小于6位")
     private String password;
     //省略get/set方法
+}
+controller
+@RequestMapping("/demoAdd")
+public String demoAdd(@Valid Demo demo,BindingResult result,Model model){
+    //有错误信息.
+    model.addAttribute("demo",demo);
+    if(result.hasErrors()){
+        List<ObjectError>  list = result.getAllErrors();
+        for(ObjectError  error:list){
+        System.out.println(error.getCode()+"---"+error.getArguments()+"---"+error.getDefaultMessage());
+        }
+        return "demo";
+    }
+    return "/demo";
 }
