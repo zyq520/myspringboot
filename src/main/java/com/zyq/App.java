@@ -14,8 +14,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
+import com.zyq.configurationproperties.GetPropertiesValues;
 import com.zyq.filter.MyFilter;
 import com.zyq.servlet.MyServlet;
 
@@ -28,7 +30,8 @@ import com.zyq.servlet.MyServlet;
  * @ComponentScan(basePackages={"cn.xxx","org.xxxx"})
  */
 @SpringBootApplication
-@MapperScan("com.zyq.mapper")
+@MapperScan("com.zyq.mapper")//mybatis文件扫面包
+@EnableConfigurationProperties({GetPropertiesValues.class})//properties值读取
 public class App {
     /**
      * 注册servlet
