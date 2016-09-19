@@ -27,7 +27,7 @@ import com.zyq.model.Demo;
 public interface DemoMappper {
     @Select("select * from demo")
     public List<Demo> likeName(String name);
-   
+    
     @Select("select * from demo where id = #{id}")
     public Demo getById(long id);
    
