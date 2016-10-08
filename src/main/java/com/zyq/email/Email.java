@@ -33,7 +33,7 @@ import freemarker.template.Template;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
-public class email {
+public class Email {
     @Autowired
     private JavaMailSender mailSender;
 

@@ -10,22 +10,34 @@ package com.zyq.controller;
 
 import java.util.Map;
 
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
 public class HomeController {
-    
+    @Autowired  
+    JavaMailSender mailSender;  
     @RequestMapping({"/index","/"})
     public String index(){
-       System.out.println("登入");
+        try  
+        {  
+
+        }  
+        catch(Exception ex)  
+        {  
+            System.out.println("发送邮件失败");
+        }  
        return"/index";
     }
    
