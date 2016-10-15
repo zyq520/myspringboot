@@ -23,4 +23,6 @@ import com.zyq.model.UserInfo;
 public interface UserInfoService {
     /**通过username查找用户信息;*/
     public UserInfo findByUsername(String username);
+    
+    public String cache(String name);
 }

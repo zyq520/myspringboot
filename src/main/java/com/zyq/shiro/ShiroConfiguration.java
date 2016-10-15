@@ -10,6 +10,7 @@ package com.zyq.shiro;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -18,6 +19,7 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 
 
 @Configuration
@@ -104,11 +106,11 @@ public class ShiroConfiguration {
        return authorizationAttributeSourceAdvisor;
     }
     
-    @Bean
-    public EhCacheManager ehCacheManager(){
-       System.out.println("ShiroConfiguration.getEhCacheManager()");
-       EhCacheManager cacheManager = new EhCacheManager();
-       cacheManager.setCacheManagerConfigFile("classpath:ehcache-shiro.xml");
-       return cacheManager;
-    }
+//    @Bean
+//    public EhCacheManager ehCacheManager(){
+//       System.out.println("ShiroConfiguration.getEhCacheManager()");
+//       EhCacheManager cacheManager = new EhCacheManager();
+//       cacheManager.setCacheManagerConfigFile("classpath:ehcache-shiro.xml");
+//       return cacheManager;
+//    }
 }
