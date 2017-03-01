@@ -116,6 +116,11 @@
            <artifactId>spring-boot-configuration-processor</artifactId>
            <optional>true</optional>
         </dependency>
+        <!-- rabbitMQ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+       </dependency>
 		<!--devtools可以实现页面热部署（生在保存时机），注意：因为其采用的虚拟机机制，该项重启是很快的 <dependency> <groupId>org.springframework.boot</groupId> 
 			<artifactId>spring-boot-devtools</artifactId> <optional>true</optional> </dependency> -->
 	</dependencies>

@@ -1,12 +1,20 @@
 package com.zyq;
+import java.util.Date;
+
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import com.zyq.configurationproperties.GetPropertiesValues;
 import com.zyq.filter.MyFilter;
@@ -21,6 +29,7 @@ import com.zyq.servlet.MyServlet;
  * @ComponentScan(basePackages={"cn.xxx","org.xxxx"})
  */
 @SpringBootApplication
+@EnableScheduling
 @MapperScan("com.zyq.mapper")//mybatis文件扫面包
 @EnableConfigurationProperties({GetPropertiesValues.class})//properties值读取
 public class App {
@@ -75,5 +84,25 @@ public class App {
     public static void main(String[] args) {
         //System.out.println("热部署");
         SpringApplication.run(App.class, args);
+    }
+    
+  //rabbit操作类;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+      
+    @Scheduled(cron = "0/5 * * * * ?")//3s执行1次此方法;
+    public void send(){
+       rabbitTemplate.convertAndSend("foo","zhang");
+    }
+   
+    @Bean
+    public Queue fooQueue(){
+       return new  Queue("foo");
+    }
+       
+    //接收到消息处理.
+    @RabbitListener(queues = "foo")
+    public void onMessage(@Payload String foo){
+       System.out.println(" >>> "+new Date() + ": " + foo);
     }
 }
