@@ -8,9 +8,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -32,7 +34,7 @@ import com.zyq.servlet.MyServlet;
 @EnableScheduling
 @MapperScan("com.zyq.mapper")//mybatis文件扫面包
 @EnableConfigurationProperties({GetPropertiesValues.class})//properties值读取
-public class App {
+public class App extends SpringBootServletInitializer{
     /**
      * 注册servlet
     * @Title: MyServlet 
@@ -79,7 +81,12 @@ public class App {
 //        //Sets the directory location where files will be stored.
 //        //factory.setLocation("路径地址");
 //        return factory.createMultipartConfig(); 
-//    } 
+//    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(App.class);
+    }
 
     public static void main(String[] args) {
         //System.out.println("热部署");
